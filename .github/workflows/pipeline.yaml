@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Imprimir lista de archivos
+      run: ls -R
+
     - name: Configure AWS credentials
       id: creds
       uses: aws-actions/configure-aws-credentials@v1 
